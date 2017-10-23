@@ -1,47 +1,59 @@
-## Introduction to Python using Codecademy
+# Introduction to Python using Codecademy
 
 Welcome to a gentle guide to getting up to speed in python. This page includes personal responses to exercises from [Codecademy](https://www.codecademy.com/learn). 
 
-Python learning journal 
+## Python learning journal 
+### Key rules before embarking ... 
  
-Never delete vscode 
-Keep the file as it is, as important executable information is kept there.  
- 
-Disabling PyLint  
+### Disabling PyLint  
 (select File > Preferences > Settings, then locate Python configuration) and edit this line as "python.linting.pylintEnabled": false 
  
-How to access characters in a string? 
+### 1. How to access characters in a string? 
+```python
 fifth_char = “PYTHON”[4] 
- 
+```
+### 2. Printing to screen
+
+```python
 Hello world:  
 print (”Hello world!”) 
+``` 
+### 3. Comments, single line #, Multiline: “””     comments “”” 
  
-Comments, single line #, Multiline: “””     comments “”” 
+### 4. Multiplication: *, exponentiation ** 
  
-Multiplication: *, exponentiation ** 
+### 5. Modulo 3 % 2 = 1 (this gives the remainder)  
  
-Modulo 3 % 2 = 1 (this gives the remainder)  
- 
-Key functions for analysing strings 
+### 6. Key functions for analysing strings 
+
+```python
 len(string) 
 string.lower() 
 string.upper() 
 str(non string) 
-Dot notation only work with strings, while str() and len() work with all data types 
- 
+```
+
+### 7. Dot notation: 
+only work with strings, while str() and len() work with all data types 
+
+```python 
 name = raw_input("What is your name?") 
 quest = raw_input("What is your quest?") 
 color = raw_input("What is your favorite color?") 
 print "Ah, so your name is %s, your quest is %s, " \ 
 "and your favorite color is %s." % (name, quest, color) 
- 
-How to extract the date using libraries 
+```
+
+### 8. How to extract the date using libraries 
+
+```python
 From datetime import datetime 
 Now = datetime.now() 
 Now.month, day, year, hour, minute, second 
- 
-Lab exercise 1: 
-Pig Latin converter: 
+```
+
+Lab exercise 1: Pig Latin converter
+```python
 def pyglatin(): 
     # variable definitions 
     original = raw_input('Enter your first word to translate:') 
@@ -64,8 +76,8 @@ def pyglatin():
      
 print 'Welcome to the Pig Latin Translator!' 
 pyglatin() 
-Page Break
- 
+```
+```python 
 MIT Solution 
 VOWELS = ('a', 'e', 'i', 'o', 'u') 
 def convert_word(word): 
@@ -107,7 +119,10 @@ print "Checks whether comments are in Caps"
 user_input = raw_input("Enter your comment here ") 
 print shout(user_input) 
 Page Break
- 
+```
+
+### Function to cube a number
+```python
 def cube(number): 
     number = number**3 
     return number 
@@ -121,27 +136,36 @@ user_input = raw_input("Enter a number")
 user_input = int(user_input) 
 print by_three(user_input) 
 Page Break
- 
+```
+
 # Importing the math library 
+```python
 import math 
 print math.sqrt(25) 
-Page Break
+```
  
 # How to import just a function from a library 
-from module import function 
+Sometimes all the contents of a library aren't required so we may just import a module from within it. The benefits are the speed of loading and executing the code.
+
 e.g. 
+```python
 From math import sqrt 
-Page Break
+```
  
 # Import *everything* from the math module on line 3! 
+```python
 from math import * 
-Page Break
+```
+
 # List all functions belonging to a library 
+```python
 import math            # Imports the math module 
 everything = dir(math) # Sets everything to a list of things from math 
 print everything       # Prints 'em all! 
-Page Break
- 
+```
+
+# Printing basic statistics - largest, smallest & distance from 0
+```python
 def biggest_number(*args): 
     print max(args) 
     return max(args) 
@@ -161,7 +185,9 @@ Page Break
 print type(42) 
 print type(4.2) 
 print type('spam') 
-Page Break
+```
+
+``python
 ef shut_down(s): 
     if s == "yes": 
         return "Shutting down" 
@@ -176,10 +202,17 @@ option = "no"
 output = shut_down(option) 
 print output 
 Page Break
- 
+```
+#Small example of the sqrt function
+
+```python
 from math import sqrt  
 print sqrt(13689) 
-Page Break
+```
+
+# If-Else statements to calculate hotel bookings
+
+```python
 # Function definitions 
  
  
@@ -220,8 +253,7 @@ days = int(raw_input("How many days are you travelling for? "))
 spending_money = int(raw_input("how much spending money do you need? ")) 
 print "You are travelling to %s for %d days with %d spending money" % (city, days, spending_money) 
 print "Your total trip costs %s" % (trip_cost(city,days, spending_money)) 
-  
-Page Break
+```
  
 Conditional Flow notes: 
 Logical operators often provide a way to simplify nested conditional statements. For example, we can rewrite the following code using a single conditional: (link) 
