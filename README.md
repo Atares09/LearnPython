@@ -34,7 +34,10 @@ str(non string)
 ```
 
 ### 7. Dot notation: 
-only work with strings, while str() and len() work with all data types 
+When manipulating text we use the dot notation with reserved word functions. These are 
+..* str() 
+..* len() 
+which work with all data types 
 
 ```python 
 name = raw_input("What is your name?") 
@@ -52,7 +55,7 @@ Now = datetime.now()
 Now.month, day, year, hour, minute, second 
 ```
 
-Lab exercise 1: Pig Latin converter
+# Lab exercise 1: Pig Latin converter
 ```python
 def pyglatin(): 
     # variable definitions 
@@ -77,8 +80,9 @@ def pyglatin():
 print 'Welcome to the Pig Latin Translator!' 
 pyglatin() 
 ```
+## MIT Solution 
 ```python 
-MIT Solution 
+
 VOWELS = ('a', 'e', 'i', 'o', 'u') 
 def convert_word(word): 
     first_letter = word[0] 
@@ -187,7 +191,7 @@ print type(4.2)
 print type('spam') 
 ```
 
-``python
+```python
 ef shut_down(s): 
     if s == "yes": 
         return "Shutting down" 
@@ -203,7 +207,7 @@ output = shut_down(option)
 print output 
 Page Break
 ```
-#Small example of the sqrt function
+# Small example of the sqrt function
 
 ```python
 from math import sqrt  
@@ -255,14 +259,22 @@ print "You are travelling to %s for %d days with %d spending money" % (city, day
 print "Your total trip costs %s" % (trip_cost(city,days, spending_money)) 
 ```
  
-Conditional Flow notes: 
-Logical operators often provide a way to simplify nested conditional statements. For example, we can rewrite the following code using a single conditional: (link) 
+# Conditional Flow notes: 
+Logical operators often provide a way to simplify nested conditional statements. For example, we can rewrite the following code using a [single conditional](http://www.openbookproject.net/books/bpp4awd/ch04.html):
+
+```python
 if 0 < x:            # assume x is an int here    if x < 10:        print("x is a positive single digit.") 
+```
 The print function is called only if we make it past both the conditionals, so we can use the and operator: 
+```python
 if 0 < x and x < 10:    print("x is a positive single digit.") 
+```
 Python actually allows a short hand form for this, so the following will also work: 
+```python
 if 0 < x < 10:    print("x is a positive single digit.") 
- Example: 
+```
+Example: 
+```python
 def is_numeric(num): 
     if type(num) == int or type(num) == float: 
         return True 
@@ -280,7 +292,9 @@ def distance_from_zero(args):
 user_input = int(raw_input("Enter a number to determine its absolute value")) 
 print "You entered %d" % (user_input) 
 print "The abs value is %d" % (distance_from_zero(user_input)) 
-  For Loops: 
+```
+# For Loops: 
+```python
 for i in range(5): 
     print('i is now:', i) 
 i is now 0 
@@ -288,39 +302,61 @@ i is now 1
 i is now 2 
 i is now 3 
 i is now 4 
- 
-Lists 
+```
+
+# Lists 
+```python
 zoo_animals = ["pangolin", "cassowary", "sloth", "Llama" ]; 
+```
+
 # One animal is missing! 
+```python
 if len(zoo_animals) > 3: 
 print "The first animal at the zoo is the " + zoo_animals[0] 
 print "The second animal at the zoo is the " + zoo_animals[1] 
 print "The third animal at the zoo is the " + zoo_animals[2] 
 print "The fourth animal at the zoo is the " + zoo_animals[3] 
-Page Break
-Sometimes, you only want to access a portion of a list. 
+```
+
+# Sometimes, you only want to access a portion of a list. 
+```python
 letters = ['a', 'b', 'c', 'd', 'e'] 
 slice = letters[1:3]  
-print sliceprint letters 
+print slice 
+print letters 
+```
+
 In the above example, we first create a list called letters. 
 Then, we take a subsection and store it in the slice list. We start at the index before the colon and continue up to but not including the index after the colon. 
-Slicing Lists and Strings 
+
+# Slicing Lists and Strings 
 You can slice a string exactly like a list! In fact, you can think of strings as lists of characters: each character is a sequential item in the list, starting from index 0. 
+
+```python
 my_list[:2]# Grabs the first two itemsmy_list[3:]# Grabs the fourth through last items 
-If your list slice includes the very first or last item in a list (or a string), the index for that item doesn't have to be included. 
-Page Break
- 
+```
+If your list slice includes the very first or last item in a list (or a string), the index for that item doesn't have to be included.  
+
 Sometimes you need to search for an item in a list. 
-animals = ["ant", "bat", "cat"]print animals.index("bat") 
+```python
+animals = ["ant", "bat", "cat"]
+print animals.index("bat") 
+```
+
 First, we create a list called animals with three strings. 
 Then, we print the first index that contains the string "bat", which will print 1. 
 We can also insert items into a list. 
+
+```python
 animals.insert(1, "dog")print animals 
+```
 We insert "dog" at index 1, which moves everything down by 1. 
 We print out ["ant", "dog", "bat", "cat"] 
-Page Break
+
  
-How to Append: 
+# How to Append: 
+
+```python
 suitcase = []  
 suitcase.append("sunglasses") 
 suitcase.append("T-shirt") 
@@ -329,19 +365,20 @@ suitcase.append("sunscreen")
 list_length = len(suitcase) # Set this to the length of suitcase 
 print "There are %d items in the suitcase." % (list_length) 
 print suitcase 
-Page Break
+```
  
-For One and All 
+# For One and All 
 If you want to do something with every item in the list, you can use a for loop. If you've learned about for loops in JavaScript, pay close attention! They're different in Python. 
 for variable in list_name:    # Do stuff! 
-A variable name follows the forkeyword; it will be assigned the value of each list item in turn. 
+A variable name follows the for keyword; it will be assigned the value of each list item in turn. 
 Then in list_name designates list_name as the list the loop will work on. The line ends with a colon (:) and the indented code that follows it will be executed once per item in the list. 
 Example: 
+```python
 my_list = [1,9,3,8,5,7] 
 for number in my_list: 
     print 2*number 
-Page Break
- 
+```
+```python 
 start_list = [5, 3, 1, 2, 4] 
 square_list = [] 
  
@@ -350,9 +387,10 @@ for number in start_list:
 square_list.sort() 
 print square_list 
  
-Page Break
+```
  
-Dictionary entries 
+# Dictionary entries 
+```python
 menu = {} # Empty dictionary 
 menu['Chicken Alfredo'] = 14.50 # Adding new key-value pair 
 menu['Chicken parmaganna'] = 9.50 
@@ -362,86 +400,61 @@ menu['Quesadilla'] = 6.50
  
 print "There are " + str(len(menu)) + " items on the menu." 
 print menu 
-Page Break
+```
  
-Adding and removing entries from a dictionary entry 
+## Adding and removing entries from a dictionary entry 
+```python
 # key - animal_name : value - location  
 zoo_animals = { 'Unicorn' : 'Cotton Candy House', 
 'Sloth' : 'Rainforest Exhibit', 
 'Bengal Tiger' : 'Jungle House', 
 'Atlantic Puffin' : 'Arctic Exhibit', 
 'Rockhopper Penguin' : 'Arctic Exhibit'} 
+```
+
 # A dictionary (or list) declaration may break across multiple lines 
- 
- 
-# Removing the 'Unicorn' entry. (Unicorns are incredibly expensive.) 
+Removing the 'Unicorn' entry. (Unicorns are incredibly expensive.) 
+```python
 del zoo_animals['Unicorn'] 
- 
- 
 # Your code here! 
 del zoo_animals['Sloth'] 
 del zoo_animals['Bengal Tiger'] 
 zoo_animals['Rockhopper Penguin'] = 'Jungle House' 
 print zoo_animals 
-Page Break
+```
  
-Escape Sequence 
-Meaning 
-Notes 
-\newline 
-Backslash and newline ignored 
-  
-\\ 
-Backslash (\) 
-  
-\' 
-Single quote (') 
-  
-\" 
-Double quote (") 
-  
-\a 
-ASCII Bell (BEL) 
-  
-\b 
-ASCII Backspace (BS) 
-  
-\f 
-ASCII Formfeed (FF) 
-  
-\n 
-ASCII Linefeed (LF) 
-  
-\r 
-ASCII Carriage Return (CR) 
-  
-\t 
-ASCII Horizontal Tab (TAB) 
-  
-\v 
-ASCII Vertical Tab (VT) 
-  
-\ooo 
-Character with octal value ooo 
-(1,3) 
-\xhh 
-Character with hex value hh 
-(2,3) 
+Escape Sequence | Meaning 
+--- | --- | ---
+\newline | Backslash and newline ignored 
+\\ | Backslash (\) 
+\' | Single quote (') 
+\" | Double quote (") 
+\a | ASCII Bell (BEL) 
+\b | ASCII Backspace (BS) 
+\f | ASCII Formfeed (FF) 
+\n | ASCII Linefeed (LF) 
+\r |ASCII Carriage Return (CR) 
+\t |ASCII Horizontal Tab (TAB) 
+\v | ASCII Vertical Tab (VT) 
+\ooo | Character with octal value ooo 
+\xhh | Character with hex value hh 
  
 Python allows for strings to be defined with either single or double quotes 
 Page Break
  
-How to remove list items: 
+# How to remove list items: 
+```python
 backpack = ['xylophone', 'dagger', 'tent', 'bread loaf'] 
 backpack.remove('dagger') 
-Page Break
- 
+```
+```python 
 Comment all highlighted text 
 Ctrl + / 
-Page Break
+```
  
 Further details with dictionaries 
 You can store a list, number or a string as an associated variable to a key 
+```python
 my_dict = { 
     "fish": ["c", "a", "r", "p"], 
     "cash": -4483, 
@@ -449,9 +462,10 @@ my_dict = {
 } 
 print my_dict["fish"][0:4] 
 Prints out:  ["c", "a", "r", "p"] 
-Page Break
+```
  
 Adding and removing dictionary entries 
+```python
 inventory = { 
     'gold' : 500, 
     'pouch' : ['flint', 'twine', 'gemstone'], # Assigned a new list to 'pouch' key 
@@ -468,16 +482,20 @@ inventory['backpack'].sort()
 inventory['backpack'].remove('dagger') 
 inventory['gold'] += 50 
 print inventory 
-Page Break
+```
+
 Printing multiple dictionaries using for loops 
+```python
 prices = {"banana": 4, "apple": 2, "orange": 1.5, "pear": 3} 
 stock = {"banana": 6, "apple": 0, "orange": 32, "pear": 15} 
 for products in prices: 
     print products 
     print "price: %s" % prices[products] 
     print "stock: %s" % stock[products] 
-Page Break
+```
+
 Printing and adding to dictionary values 
+```python
 prices = { 
     "banana" : 4, 
     "apple" : 2, 
@@ -500,11 +518,10 @@ total = 0
 for key in prices: 
     total = total + prices[key]*stock[key]  
 print total 
-Page Break
- 
-First problem encountered in code academy exercises: 
-Using Dictionaries and lists to calculate the price of a shopping list 
- 
+```
+
+# Using Dictionaries and lists to calculate the price of a shopping list 
+```python 
 shopping_list = ["banana", "orange", "apple"] 
  
  
@@ -523,9 +540,6 @@ prices = {
 } 
  
  
-# Write your code below! 
- 
- 
 def compute_bill(food): 
     total = 0 
     for key in food: 
@@ -534,8 +548,8 @@ def compute_bill(food):
      
 print compute_bill(shopping_list) 
  
-Page Break
- 
+```
+```python 
 shopping_list = ["banana", "orange", "apple"] 
  
 stock = { 
@@ -565,11 +579,12 @@ def compute_bill(food):
  
 print "Your total comes out to: $%s" % (compute_bill(shopping_list)) 
  
-Page Break
+```
+
 Printing items in stock referencing both key and stock items: 
+```python
 shopping_list = ["banana", "orange", "apple"] 
- 
- 
+
 stock = { 
     "banana": 6, 
     "apple": 0, 
@@ -599,8 +614,8 @@ print "Your total comes out to: $%s" % (compute_bill(shopping_list))
 print "Remaining stock items are:" 
 for keys in stock: 
     print "%s : %s"% (keys, stock[keys]) 
-Page Break
- 
+```
+```python 
 shopping_list = ["banana", "orange", "apple"] 
  
 stock = { 
@@ -641,8 +656,9 @@ for keys in stock:
      
  
  
-Page Break
- 
+```
+# Homework grading
+```python
 lloyd = { 
     "name": "Lloyd", 
     "homework": [90.0, 97.0, 75.0, 92.0], 
@@ -700,11 +716,11 @@ students = [lloyd, alice, tyler]
  
 print get_class_average(students) 
 print get_letter_grade(get_class_average(students)) 
-     
+```     
  
  
-How to append to a list 
- 
+# How to append to a list 
+```python 
 n = [1, 3, 5] 
 # Append the number 4 here 
 n.append(4) 
@@ -725,7 +741,9 @@ n = [1, 3, 5]
 # n.pop(0) 
 # n.remove(1) 
  print n 
-Page Break
+```
+
+```python
 Manipulating Functions 
  
 m = 5 
@@ -735,45 +753,59 @@ def add_function(x, y):
     return x + y 
  print add_function(m, n) 
   
-Page Break
+```
  
 Concatenating string functions 
- 
+
+```python
 n = "Hello" 
 # Your function here! 
 def string_function(s): 
     return s +" "+ "world" 
  print string_function(n) 
-Page Break
- 
+```
+
+```python
 Passing a list to a function 
 You pass a list to a function the same way you pass any other argument to a function. 
 def list_function(x): 
     return x 
  n = [3, 5, 7] 
 print list_function(n) 
-Page Break
+```
  
-Using an element from a list in a function 
+# Using an element from a list in a function 
 Passing a list to a function will store it in the argument (just like with a string or a number!) 
+```python
 def first_item(items):    print items[0]numbers = [2, 7, 9]first_item(numbers) 
+```
 In the example above, we define a function called first_item. It has one argument called items. 
+
 Inside the function, we print out the item stored at index zero of items. 
+
 After the function, we create a new list called numbers. 
+
 Finally, we call the first_itemfunction with numbers as its argument, which prints out 2. 
+```python
 def list_function(x): 
     return x[1] 
  n = [3, 5, 7] 
 print list_function(n) 
-Page Break
+```
  
-Modifying an element of a list in a function 
+# Modifying an element of a list in a function 
+
 Modifying an element in a list in a function is the same as if you were just modifying an element of a list outside a function. 
+```python
 def double_first(n):    n[0] = n[0] * 2numbers = [1, 2, 3, 4]double_first(numbers)print numbers 
+```
+
 We create a list called numbers. 
 We use the double_first function to modify that list. 
 Finally, we print out [2, 2, 3, 4] 
+
 When we pass a list to a function and modify that list, like in the double_first function above, we end up modifying the original list. 
+```python
 def list_function(x): 
      
     x[1] = x[1] + 3 
@@ -784,12 +816,14 @@ n = [3, 5, 7]
   
 print list_function(n) 
  
-Page Break
+```
  
-Printing out a list item by item in a function 
+# Printing out a list item by item in a function 
 This exercise is to go over how to utilize every element in a list in a function. You can use the existing code to complete the exercise and see how running this operation inside a function isn't much different from running this operation outside a function. 
+
 Don't worry about the range function quite yet—we'll explain it later in this section. 
-Instructions 
+
+```python
 n = [3, 5, 7] 
 for i in range(0, len(n)): 
     print n[i] 
@@ -800,8 +834,8 @@ def print_list(x):
     for i in range(0, len(x)): 
         print x[i] 
  print_list(n) 
-Page Break
- 
+```
+```python 
 n = [3, 5, 7] 
   
 def double_list(x): 
@@ -811,21 +845,34 @@ def double_list(x):
 # Don't forget to return your new list! 
   
 print double_list(n) 
-Page Break
+```
  
-Passing a range into a function 
+# Passing a range into a function 
 Okay! Range time. The Python range()function is just a shortcut for generating a list, so you can use ranges in all the same places you can use lists. 
-range(6) # => [0,1,2,3,4,5]range(1,6) # => [1,2,3,4,5]range(1,6,3) # => [1,4] 
+
+```python
+range(6) # => [0,1,2,3,4,5]
+range(1,6) # => [1,2,3,4,5]
+range(1,6,3) # => [1,4] 
+```
+
 The range function has three different versions: 
+```python
 range(stop) 
 range(start, stop) 
 range(start, stop, step) 
+```
 In all cases, the range() function returns a list of numbers from start up to (but not including) stop. Each item increases by step. 
 If omitted, start defaults to zero and step defaults to one. 
+
 Using strings in lists in functions 
+
 Now let's try working with strings! 
+
 for item in list:    print itemfor i in range(len(list)):    print list[i] 
+
 The example above is just a reminder of the two methods for iterating over a list. 
+
 Instructions 
 Create a function that concatenates strings. 
 Define a function called join_strings accepts an argument called words. It will be a list. 
@@ -833,6 +880,8 @@ Inside the function, create a variable called result and set it to "", an empty 
 Iterate through the words list and append each word to result. 
 Finally, return the result. 
 Don't add spaces between the joined strings! 
+
+```python
 n = ["Michael ", "Lieberman"] 
 # Add your function here 
 def join_strings(words): 
@@ -841,32 +890,50 @@ def join_strings(words):
         result += words[item] 
 return result 
  print join_strings(n) 
- 
-Using two lists as two arguments in a function 
+```
+
+# Using two lists as two arguments in a function 
 Using multiple lists in a function is no different from just using multiple arguments in a function! 
+
+```python
 a = [1, 2, 3]b = [4, 5, 6]print a + b# prints [1, 2, 3, 4, 5, 6] 
+```
+
 The example above is just a reminder of how to concatenate two lists. 
 Instructions 
 Create a function that joins two lists together. 
 On line 4, define a function called join_lists that has two arguments, xand y. They will both be lists. 
 Inside that function, return the result of concatenating x and ytogether. 
+
 m = [1, 2, 3] 
 n = [4, 5, 6] 
- # Add your code here! 
+```python
+# Add your code here! 
 def join_lists(x, y): 
     return x + y 
 print join_lists(m, n) 
 # You want this to print [1, 2, 3, 4, 5, 6] 
- 
+```
+
 Using a list of lists in a function 
+
 Finally, this exercise shows how to make use of a single list that contains multiple lists and how to use them in a function. 
+
+```python
 list_of_lists = [[1,2,3], [4,5,6]]for lst in list_of_lists:    for item in lst:        print item 
+```
 In the example above, we first create a list containing two items, each of which is a list of numbers. 
+
 Then, we iterate through our outer list. 
+
 For each of the two inner lists (as lst), we iterate through the numbers (as item) and print them out. 
+
 We end up printing out: 
+
 123456 
-Instructions 
+
+# Flatten & Concatenate
+
 Create a function called flatten that takes a single list and concatenates all the sublists that are part of it into a single list. 
 On line 3, define a function called flatten with one argument called lists. 
 Make a new, empty list called results. 
@@ -875,6 +942,8 @@ Iterate through numbers.
 For each number, .append() it to results. 
 Finally, return results from your function. 
 n = [[1, 2, 3], [4, 5, 6, 7, 8, 9]] 
+
+```python
 # Add your function here 
 def flatten(lists): 
     results = [] 
@@ -883,28 +952,46 @@ def flatten(lists):
             results.append(i) 
     return results 
  print flatten(n) 
-Welcome to Battleship! 
+```python
+
+# Project 1: Battle Ship!
+
+## Welcome to Battleship! 
 In this project you will build a simplified, one-player version of the classic board game Battleship! In this version of the game, there will be a single ship hidden in a random location on a 5x5 grid. The player will have 10 guesses to try to sink the ship. 
-To build this game we will use our knowledge of lists, conditionals and functions in Python. When you're ready to get started, click run to continue. 
+
+To build this game we will use our knowledge of lists, conditionals and functions in Python. When you're ready to get started, click 
+run to continue. 
+
 Instructions 
+
 Make a List 
 Good! Now we'll use a built-in Python function to generate our board, which we'll make into a 5 x 5 grid of all "O"s, for "ocean." 
+
 print ["O"] * 5 
+
 will print out ['O', 'O', 'O', 'O', 'O'], which is the basis for a row of our board. 
+
 We'll do this five times to make five rows. (Since we have to do this five times, it sounds like a loop might be in order.) 
+
 Instructions 
 Create a 5 x 5 grid initialized to all 'O's and store it in board. 
 Use range() to loop 5 times. 
+
 Inside the loop, .append() a list containing 5 "O"s to board, just like in the example above. 
 Note that these are capital letter "O" and not zeros. 
 Hide... 
+
 Excellent! Now, let's hide our battleship in a random location on the board. 
+
 Since we have a 2-dimensional list, we'll use two variables to store the ship's location, ship_row and ship_col. 
 from random import randintcoin = randint(0, 1)dice = randint(1, 6) 
 In the above example, we first import the randint(low, high) function from the random module. 
+
 Then, we generate either zero or one and store it in coin. 
 Finally, we generate a number from one to six inclusive. 
+
 Let's generate a random_row and random_col from zero to four! 
+```python
 from random import randint  
   
 board = [] 
@@ -913,27 +1000,44 @@ board = []
 def print_board(board): 
     for row in board: 
         print " ".join(row) 
+```       
 Okay—now for the fun! We have the actual location of the ship and the player's guess so we can check to see if the player guessed right. 
+
 For a guess to be right, guess_colshould be equal to ship_col and guess_row should be equal to ship_row. 
 if guess_col == 0 and guess_row == 0:    print "Top-left corner." 
+
 The example above is just a reminder about if statements. 
 Instructions 
+
 On line 29, add an if guess_rowequals ship_row and guess_col equals ship_col. 
+
 If that is the case, please print out "Congratulations! You sank my battleship!" 
 You win! 
+
 Okay—now for the fun! We have the actual location of the ship and the player's guess so we can check to see if the player guessed right. 
+
 For a guess to be right, guess_colshould be equal to ship_col and guess_row should be equal to ship_row. 
 if guess_col == 0 and guess_row == 0:    print "Top-left corner." 
+
 The example above is just a reminder about if statements. 
+
 Instructions 
+
 On line 29, add an if guess_rowequals ship_row and guess_col equals ship_col. 
+
 If that is the case, please print out "Congratulations! You sank my battleship!" 
+
 While you're here 
+
 The while loop is similar to an ifstatement: it executes the code inside of it if some condition is true. The difference is that the while loop will continue to execute as long as the condition is true. In other words, instead of executing if something is true, it executes while that thing is true. 
+
 Line 6 decides when the loop will be executed. So, "as long as count is less than 5," the loop will continue to execute. Line 8 increases count by 1. This happens over and over until countequals 5. 
+
 Instructions 
+
 Change the loop so it counts up to 9 (inclusive). 
-Be careful not to change or remove the count += 1 bit—if Python has no way to increase count, your loop could go on forever and become an infinite loopwhich could crash your computer / browser! 
+Be careful not to change or remove the count += 1. If Python has no way to increase count, your loop could go on forever and become an infinite loopwhich could crash your computer / browser! 
+```python
 count = 0 
  if count < 5: 
     print "Hello, I am an if statement and count is", count 
@@ -941,26 +1045,31 @@ count = 0
 while count < 5: 
     print "Hello, I am a while and count is", count 
     count += 1 
- 
+``` 
 Output: 
-Hello, I am an if statement and count is 0Hello,  
-I am a while and count is 0 
+Hello, I am an if statement and count is 0
+Hello, I am a while and count is 0 
 Hello, I am a while and count is 1 
 Hello, I am a while and count is 2 
 Hello, I am a while and count is 3 
 Hello, I am a while and count is 4 
-Page Break
+
  
 While you're here 
+
 The while loop is similar to an ifstatement: it executes the code inside of it if some condition is true. The difference is that the while loop will continue to execute as long as the condition is true. In other words, instead of executing if something is true, it executes while that thing is true. 
+
 Line 6 decides when the loop will be executed. So, "as long as count is less than 5," the loop will continue to execute. Line 8 increases count by 1. This happens over and over until countequals 5. 
 Instructions 
+
 Change the loop so it counts up to 9 (inclusive). 
 Be careful not to change or remove the count += 1 bit—if Python has no way to increase count, your loop could go on forever and become an infinite loop which could crash your computer / browser! 
  
 While you're at it 
 Inside a while loop, you can do anything you could do elsewhere, including arithmetic operations. 
+
 Instructions 
+
 Create a while loop that prints out all the numbers from 1 to 10 squared (1, 4, 9, 16, ... , 100), each on their own line. 
 Fill in the blank space so that our while loop goes from 1 to 10 inclusive. 
 Inside the loop, print the value of num squared. The syntax for squaring a number is num ** 2. 
@@ -972,46 +1081,68 @@ while num < 11:
     num += 1 
 149162536496481100 
  
-Simple errors 
+# Simple errors with While Loops 
+
 A common application of a while loop is to check user input to see if it is valid. For example, if you ask the user to enter y or n and they instead enter 7, then you should re-prompt them for input. 
 Instructions 
+
 Fill in the loop condition so the user will be prompted for a choice over and over while choice does not equal 'y' and choice does not equal 'n'.Remember, use the != operator to test if two things are different, such as choice != y, and the andoperator to check more than one thing, such as A and B. 
+
+```python
 choice = raw_input('Enjoying the course? (y/n)') 
   
 while choice != "y" and choice != "n":   
     # Fill in the condition (before the colon) 
     choice = raw_input("Sorry, I didn't catch that. Enter again: ") 
-Infinite loops 
+```
+
+# Infinite loops 
 An infinite loop is a loop that never exits. This can happen for a few reasons: 
+
 The loop condition cannot possibly be false (e.g. while 1 != 2) 
+
 The logic of the loop prevents the loop condition from becoming false. 
+
 Example: 
-count = 10while count > 0:    count += 1 # Instead of count -= 1 
+```python
+count = 10
+while count > 0: count += 1 # Instead of count -= 1 
+```
+
 Instructions 
 The loop in the editor has two problems: it's missing a colon (a syntax error) and count is never incremented (logical error). The latter will result in an infinite loop, so be sure to fix both before running! Since count is never incremented (count += 1), count is always 0, and since 0 < 10, 0 will be printed over and over again forever. 
+```python
 count = 0 
 while count < 10: # Add a colon 
     print count 
     count += 1  
     # Increment count 
 Break 
+```
+
 The break is a one-line statement that means "exit the current loop." An alternate way to make our counting loop exit and stop executing is with the break statement. 
+
 First, create a while with a condition that is always true. The simplest way is shown. 
 Using an if statement, you define the stopping condition. Inside the if, you write break, meaning "exit the loop." 
 The difference here is that this loop is guaranteed to run at least once. 
+
 Instructions 
 See what the break does? Feel free to mess around with it (but make sure you don't cause an infinite loop)! Click Save & Submit Code when you're ready to continue. 
+```python
 count = 0 
  while True: 
     print count 
     count += 1 
     if count >= 10: 
         Break 
-While / else 
+```
+
+# While / else 
 Something completely different about Python is the while/else construction. while/else is similar to if/else, but there is a difference: the else block will execute anytime the loop condition is evaluated to False. This means that it will execute if the loop is never entered or if the loop exits normally. If the loop exits as the result of a break, the elsewill not be executed. 
 In this example, the loop will break if a 5 is generated, and the else will not execute. Otherwise, after 3 numbers are generated, the loop condition will become false and the else will execute. 
 Instructions 
 Click Save & Submit Code to see while/else in action! 
+```python
 import random 
 print "Lucky Numbers! 3 numbers will be generated." 
 print "If one of them is a '5', you lose!" 
@@ -1025,19 +1156,43 @@ while count < 3:
     count += 1 
 else: 
     print "You win!" 
-Your own while / else 
+```
+
+# Your own while / else 
 Now you should be able to make a game similar to the one in the last exercise. The code from the last exercise is below: 
-count = 0while count < 3:    num = random.randint(1, 6)    print num    if num == 5:        print "Sorry, you lose!"        break    count += 1else:    print "You win!" 
+```python
+count = 0
+while count < 3: 
+ num = random.randint(1, 6)    
+
+print num    
+if num == 5:  
+   print "Sorry, you lose!"
+   break    
+   count += 1
+else:
+   print "You win!" 
+```
+
 In this exercise, allow the user to guess what the number is three times. 
+```python
 guess = int(raw_input("Your guess: ")) 
+```
 Remember, raw_input turns user input into a string, so we use int() to make it a number again. 
+
 Instructions 
+
 Use a while loop to let the user keep guessing so long as guesses_leftis greater than zero. 
+
 Ask the user for their guess, just like the second example above. 
+
 If they guess correctly, print 'You win!' and break. 
+
 Decrement guesses_left by one. 
 Use an else: case after your whileloop to print You lose.. 
+
 This game will have a very similar structure, but instead of losing right before the break, the user should win. 
+
 The if should check if guess == random_number. If it does, then it's the winning guess! 
 from random import randint 
   
@@ -1045,7 +1200,9 @@ from random import randint
 random_number = randint(1, 10) 
   
 guesses_left = 3 
+
 # Start your game! 
+```python
 while guesses_left != 0 : 
     guess = int(raw_input("Your guess: ")) 
     if guess == random_number: 
@@ -1054,21 +1211,25 @@ while guesses_left != 0 :
     guesses_left -= 1 
 else:  
     print ("You lose, number was %d") % (random_number) 
+```
 For your health 
 An alternative way to loop is the forloop. The syntax is as shown; this example means "for each number i in the range 0 - 9, print i". 
+
 Instructions 
 Make the loop print the numbers from 0 to 19 instead of 0 to 9. 
 Make sure to change the number inside of range. 
+```python
 print "Counting..." 
   
 for i in range(20): 
     print I 
- 
+``` 
 For your hobbies 
 This kind of loop is useful when you want to do something a certain number of times, such as append something to the end of a list. 
 Instructions 
 Create a for loop that prompts the user for a hobby 3 times, then appends each one to hobbies. 
 Your for loop should use range(3). You should use the raw_input()function to get info from the user and hobbies.append(hobby) to add the hobby to the list. 
+```python
 hobbies = [] 
 # Add your code below! 
 for i in range(5): 
@@ -1079,24 +1240,30 @@ print ("\nYour hobbies are ...\n")
 for i in range(len(hobbies)): 
     print hobbies[i] 
  
-Page Break
+```
+
 For your strings 
 Using a for loop, you can print out each individual character in a string. 
 The example in the editor is almost plain English: "for each character c in thing, print c". 
 Instructions 
 Add a second for loop so that each character in word is printed one at a time. 
 Use the example on lines 3 - 4 as a model. 
- 
+```python 
 thing = "spam!" 
  for c in thing: 
     print c 
 word = "eggs!" 
 for i in word: 
     print i 
-# Your code here! 
-For your A 
+```python
+
 String manipulation is useful in forloops if you want to modify some content in a string. 
-word = "Marble"for char in word:    print char, 
+```python
+word = "Marble"
+for char in word:    
+   print char, 
+```
+
 The example above iterates through each character in word and, in the end, prints out M a r b l e. 
 The , character after our printstatement means that our next printstatement keeps printing on the same line. 
 Instructions 
@@ -1112,24 +1279,25 @@ if c == "A" or c == "a":    print "X",
 phrase = "A bird in the hand..." 
   
 # Add your for loop 
-  
+```python  
 for char in phrase: 
     if(char == 'A' or char == 'a'): 
         print 'X', 
     else: 
         print char, 
-  
-  
-  
 #Don't delete this print statement! 
 Print 
- 
+```  
+
 For your lists 
+
 Perhaps the most useful (and most common) use of for loops is to go through a list. 
 On each iteration, the variable num will be the next value in the list. So, the first time through, it will be 7, the second time it will be 9, then 12, 54, 99, and then the loop will exit when there are no more values in the list. 
+
 Instructions 
 Write a second for loop that goes through the numbers list and prints each element squared, each on its own line.Use the ** operator for exponentiation. The rest of the loop should be very similar to the first one. 
 numbers  = [7, 9, 12, 54, 99] 
+```python
 print "This list contains: " 
 for num in numbers: 
     print num 
@@ -1137,35 +1305,49 @@ for num in numbers:
 print "The squared list contains:" 
 for num in numbers: 
     print num ** 2 
+```
+
 Looping over a dictionary 
 You may be wondering how looping over a dictionary would work. Would you get the key or the value? 
 The short answer is: you get the key which you can use to get the value. 
+```python
 d = {'x': 9, 'y': 10, 'z': 20}for key in d:    if d[key] == 10:        print "This dictionary has the value 10!" 
+```
 First, we create a dictionary with strings as the keys and numbers as the values. 
 Then, we iterate through the dictionary, each time storing the key in key. 
 Next, we check if that key's value is equal to 10. 
 Finally, we print This dictionary has the value 10! 
+
 Instructions 
 On line 5, print the key, followed by a space, followed by the value associated with that key. 
 An easy way to print in the requested format is to use the , character, like so: 
+```python
 greeting = "Hello"name = "World"print greeting, name# prints "Hello World" 
 d = {'a': 'apple', 'b': 'berry', 'c': 'cherry'} 
   
 for key in d: 
     # Your code here! 
     print "%s %s" % (key, d[key]) 
- 
+```
+
 Counting as you go 
 A weakness of using this for-each style of iteration is that you don't know the index of the thing you're looking at. Generally this isn't an issue, but at times it is useful to know how far into the list you are. Thankfully the built-in enumerate function helps with this. 
+
 enumerate works by supplying a corresponding index to each element in the list that you pass it. Each time you go through the loop, index will be one greater, and item will be the next item in the sequence. It's very similar to using a normal for loop with a list, except this gives us an easy way to count how many items we've seen so far. 
+
 Instructions 
+
 We don't want the user to see things listed from index 0, since this looks unnatural. Instead, the items should appear to start at index 1. Modify the print statement to reflect this behavior. See the Hint for help. 
 Instead of just printing index, print index+1! 
+```python
 choices = ['pizza', 'pasta', 'salad', 'nachos'] 
+
 print 'Your choices are:' 
+
 for index, item in enumerate(choices): 
     print index+1, itemz 
- 
+```
+
 Multiple lists 
 It's also common to need to iterate over two lists at once. This is where the built-in zip function comes in handy. 
 zip will create pairs of elements when passed two lists, and will stop at the end of the shorter list. 
@@ -1173,7 +1355,7 @@ zip can handle three or more lists as well!
 Instructions 
 Compare each pair of elements and print the larger of the two. 
 a is an element from list_a and bis an element of list_b. Use an ifstatement to compare the two and print whichever is larger. 
- 
+```python 
 list_a = [3, 9, 17, 15, 19] 
 list_b = [2, 4, 8, 10, 30, 40, 50, 60, 70, 80, 90] 
 for a, b in zip(list_a, list_b): 
@@ -1181,14 +1363,12 @@ for a, b in zip(list_a, list_b):
         print a 
     elif b > a: 
         print b 
- 
- 
- 
-Page Break
- 
-For / else 
+``` 
+
+# For / else 
 Just like with while, for loops may have an else associated with them. 
 In this case, the else statement is executed after the for, but only if the for ends normally—that is, not with a break. This code will break when it hits 'tomato', so the else block won't be executed. 
+```python
 fruits = ['banana', 'apple', 'orange', 'pear', 'grape'] 
 print 'You have...' 
 for f in fruits: 
@@ -1198,7 +1378,8 @@ for f in fruits:
     print 'A', f 
 else: 
     print 'A fine selection of fruits!' 
- 
+```
+
 The sum of scores 
 Now that we have a function to print the grades, let's create another function to compute the sum of all of the test grades. 
 This will be super-helpful when we need to compute the average score. 
@@ -1212,6 +1393,7 @@ Returns the computed sum
 Call the newly created grades_sum()function with the list of grades and print the result. 
 To compute a rolling sum, create a variable total that's initialized to zero. Then, as you loop through the list of grades, add the current grade to total. 
 Don't use sum as a variable name as it has a special meaning in Python! 
+```python
 grades = [100, 100, 90, 40, 80, 100, 85, 70, 90, 65, 90, 85, 50.5] 
   
 def print_grades(grades): 
@@ -1242,3 +1424,4 @@ def grades_std_deviation(variance):
 variance = grades_variance(grades) 
 print "Variance %d" % (variance) 
 print grades_std_deviation(variance) 
+```
