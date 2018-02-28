@@ -423,21 +423,22 @@ zoo_animals['Rockhopper Penguin'] = 'Jungle House'
 print zoo_animals 
 ```
  
-Escape Sequence | Meaning 
---- | --- | ---
-\newline | Backslash and newline ignored 
-\\ | Backslash (\) 
-\' | Single quote (') 
-\" | Double quote (") 
-\a | ASCII Bell (BEL) 
-\b | ASCII Backspace (BS) 
-\f | ASCII Formfeed (FF) 
-\n | ASCII Linefeed (LF) 
-\r |ASCII Carriage Return (CR) 
-\t |ASCII Horizontal Tab (TAB) 
-\v | ASCII Vertical Tab (VT) 
-\ooo | Character with octal value ooo 
-\xhh | Character with hex value hh 
+| Escape Sequence | Meaning                        |
+|-----------------|--------------------------------|
+| \newline        | Backslash and newline ignored  |
+| \\              | Backslash                      |
+| \'              | Single quote (')               |
+| \"              | Double quote (")               |
+| \a              | ASCII Bell (BEL)               |
+| \b              | ASCII Backspace (BS)           |
+| \f              | ASCII Formfeed (FF)            |
+| \n              | ASCII Linefeed (LF)            |
+| \r              | ASCII Carriage Return (CR)     |
+| \t              | ASCII Horizontal Tab (TAB)     |
+| \v              | ASCII Vertical Tab (VT)        |
+| \ooo            | Character with octal value ooo |
+| \xhh            | Character with hex value hh    |
+|                 |                                |
  
 Python allows for strings to be defined with either single or double quotes 
 Page Break
