@@ -453,7 +453,7 @@ Comment all highlighted text
 Ctrl + / 
 ```
  
-Further details with dictionaries 
+### Further details with dictionaries 
 You can store a list, number or a string as an associated variable to a key 
 ```python
 my_dict = { 
@@ -465,7 +465,7 @@ print my_dict["fish"][0:4]
 Prints out:  ["c", "a", "r", "p"] 
 ```
  
-Adding and removing dictionary entries 
+### Adding and removing dictionary entries 
 ```python
 inventory = { 
     'gold' : 500, 
@@ -485,7 +485,7 @@ inventory['gold'] += 50
 print inventory 
 ```
 
-Printing multiple dictionaries using for loops 
+### Printing multiple dictionaries using for loops 
 ```python
 prices = {"banana": 4, "apple": 2, "orange": 1.5, "pear": 3} 
 stock = {"banana": 6, "apple": 0, "orange": 32, "pear": 15} 
@@ -495,7 +495,7 @@ for products in prices:
     print "stock: %s" % stock[products] 
 ```
 
-Printing and adding to dictionary values 
+### Printing and adding to dictionary values 
 ```python
 prices = { 
     "banana" : 4, 
@@ -582,7 +582,7 @@ print "Your total comes out to: $%s" % (compute_bill(shopping_list))
  
 ```
 
-Printing items in stock referencing both key and stock items: 
+### Printing items in stock referencing both key and stock items: 
 ```python
 shopping_list = ["banana", "orange", "apple"] 
 
@@ -745,7 +745,7 @@ n = [1, 3, 5]
 ```
 
 ```python
-Manipulating Functions 
+# Manipulating Functions 
  
 m = 5 
 n = 13 
@@ -756,7 +756,7 @@ def add_function(x, y):
   
 ```
  
-Concatenating string functions 
+### Concatenating string functions 
 
 ```python
 n = "Hello" 
@@ -857,7 +857,7 @@ range(1,6) # => [1,2,3,4,5]
 range(1,6,3) # => [1,4] 
 ```
 
-The range function has three different versions: 
+### The range function has three different versions: 
 ```python
 range(stop) 
 range(start, stop) 
@@ -866,7 +866,7 @@ range(start, stop, step)
 In all cases, the range() function returns a list of numbers from start up to (but not including) stop. Each item increases by step. 
 If omitted, start defaults to zero and step defaults to one. 
 
-Using strings in lists in functions 
+### Using strings in lists in functions 
 
 Now let's try working with strings! 
 
@@ -874,7 +874,7 @@ for item in list:    print itemfor i in range(len(list)):    print list[i]
 
 The example above is just a reminder of the two methods for iterating over a list. 
 
-Instructions 
+### Instructions 
 Create a function that concatenates strings. 
 Define a function called join_strings accepts an argument called words. It will be a list. 
 Inside the function, create a variable called result and set it to "", an empty string. 
@@ -916,7 +916,7 @@ print join_lists(m, n)
 # You want this to print [1, 2, 3, 4, 5, 6] 
 ```
 
-Using a list of lists in a function 
+### Using a list of lists in a function 
 
 Finally, this exercise shows how to make use of a single list that contains multiple lists and how to use them in a function. 
 
@@ -963,7 +963,7 @@ In this project you will build a simplified, one-player version of the classic b
 To build this game we will use our knowledge of lists, conditionals and functions in Python. When you're ready to get started, click 
 run to continue. 
 
-Instructions 
+### Instructions 
 
 Make a List 
 Good! Now we'll use a built-in Python function to generate our board, which we'll make into a 5 x 5 grid of all "O"s, for "ocean." 
@@ -1074,13 +1074,13 @@ else:
   print_board(board)
   ```
 
-While you're here 
+### While you're here 
 
 The while loop is similar to an ifstatement: it executes the code inside of it if some condition is true. The difference is that the while loop will continue to execute as long as the condition is true. In other words, instead of executing if something is true, it executes while that thing is true. 
 
 Line 6 decides when the loop will be executed. So, "as long as count is less than 5," the loop will continue to execute. Line 8 increases count by 1. This happens over and over until countequals 5. 
 
-Instructions 
+### Instructions 
 
 Change the loop so it counts up to 9 (inclusive). 
 Be careful not to change or remove the count += 1. If Python has no way to increase count, your loop could go on forever and become an infinite loopwhich could crash your computer / browser! 
@@ -1102,7 +1102,7 @@ Hello, I am a while and count is 3
 Hello, I am a while and count is 4 
 
  
-While you're here 
+### While you're here 
 
 The while loop is similar to an ifstatement: it executes the code inside of it if some condition is true. The difference is that the while loop will continue to execute as long as the condition is true. In other words, instead of executing if something is true, it executes while that thing is true. 
 
@@ -1115,7 +1115,7 @@ Be careful not to change or remove the count += 1 bit—if Python has no way to 
 While you're at it 
 Inside a while loop, you can do anything you could do elsewhere, including arithmetic operations. 
 
-Instructions 
+### Instructions 
 
 Create a while loop that prints out all the numbers from 1 to 10 squared (1, 4, 9, 16, ... , 100), each on their own line. 
 Fill in the blank space so that our while loop goes from 1 to 10 inclusive. 
@@ -1189,6 +1189,7 @@ Something completely different about Python is the while/else construction. whil
 In this example, the loop will break if a 5 is generated, and the else will not execute. Otherwise, after 3 numbers are generated, the loop condition will become false and the else will execute. 
 Instructions 
 Click Save & Submit Code to see while/else in action! 
+
 ```python
 import random 
 print "Lucky Numbers! 3 numbers will be generated." 
@@ -1227,7 +1228,7 @@ guess = int(raw_input("Your guess: "))
 ```
 Remember, raw_input turns user input into a string, so we use int() to make it a number again. 
 
-Instructions 
+### Instructions 
 
 Use a while loop to let the user keep guessing so long as guesses_leftis greater than zero. 
 
@@ -1271,7 +1272,7 @@ print "Counting..."
 for i in range(20): 
     print I 
 ``` 
-For your hobbies 
+### For your hobbies 
 This kind of loop is useful when you want to do something a certain number of times, such as append something to the end of a list. 
 Instructions 
 Create a for loop that prompts the user for a hobby 3 times, then appends each one to hobbies. 
@@ -1289,7 +1290,7 @@ for i in range(len(hobbies)):
  
 ```
 
-For your strings 
+### For your strings 
 Using a for loop, you can print out each individual character in a string. 
 The example in the editor is almost plain English: "for each character c in thing, print c". 
 Instructions 
@@ -1336,7 +1337,7 @@ for char in phrase:
 Print 
 ```  
 
-For your lists 
+### For your lists 
 
 Perhaps the most useful (and most common) use of for loops is to go through a list. 
 On each iteration, the variable num will be the next value in the list. So, the first time through, it will be 7, the second time it will be 9, then 12, 54, 99, and then the loop will exit when there are no more values in the list. 
@@ -1354,7 +1355,7 @@ for num in numbers:
     print num ** 2 
 ```
 
-Looping over a dictionary 
+### Looping over a dictionary 
 You may be wondering how looping over a dictionary would work. Would you get the key or the value? 
 The short answer is: you get the key which you can use to get the value. 
 ```python
@@ -1377,7 +1378,7 @@ for key in d:
     print "%s %s" % (key, d[key]) 
 ```
 
-Counting as you go 
+### Counting as you go 
 A weakness of using this for-each style of iteration is that you don't know the index of the thing you're looking at. Generally this isn't an issue, but at times it is useful to know how far into the list you are. Thankfully the built-in enumerate function helps with this. 
 
 enumerate works by supplying a corresponding index to each element in the list that you pass it. Each time you go through the loop, index will be one greater, and item will be the next item in the sequence. It's very similar to using a normal for loop with a list, except this gives us an easy way to count how many items we've seen so far. 
@@ -1395,7 +1396,7 @@ for index, item in enumerate(choices):
     print index+1, itemz 
 ```
 
-Multiple lists 
+### Multiple lists 
 It's also common to need to iterate over two lists at once. This is where the built-in zip function comes in handy. 
 zip will create pairs of elements when passed two lists, and will stop at the end of the shorter list. 
 zip can handle three or more lists as well! 
@@ -1427,7 +1428,7 @@ else:
     print 'A fine selection of fruits!' 
 ```
 
-The sum of scores 
+### The sum of scores 
 Now that we have a function to print the grades, let's create another function to compute the sum of all of the test grades. 
 This will be super-helpful when we need to compute the average score. 
 I know what you're thinking, "let's just use the built-in sum() function!" The built-in function would work beautifully, but it would be too easy. 
