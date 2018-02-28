@@ -1,6 +1,6 @@
 # Introduction to Python using Codecademy
 
-Welcome to a gentle guide to getting up to speed in python. This page includes personal responses to exercises from [Codecademy](https://www.codecademy.com/learn). 
+Welcome to guided walkthrough with [Codecademy](https://www.codecademy.com/learn) introduction to Python 2.7 Programming. Please note that the syntax below is for Python 2.7. Guides for Python 3.6.4 will be available in other course summaries. 
 
 ## Python learning journal 
 ### Key rules before embarking ... 
