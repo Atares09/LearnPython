@@ -1480,3 +1480,485 @@ variance = grades_variance(grades)
 print "Variance %d" % (variance) 
 print grades_std_deviation(variance) 
 ```
+### IS_Even 
+```python
+numbers = [1,2,3,4,5,6,7,8,9]; 
+
+  
+
+def is_even(number): 
+
+    if number % 2 == 0: 
+
+        print number, "is even" 
+
+        return True 
+
+    else: 
+
+        print number, "is odd" 
+
+        return False 
+
+  
+
+for number in numbers: 
+
+    is_even(number) 
+
+```
+ 
+
+### Is_Int 
+```python
+def is_int(x):       
+
+    x = abs(x)                #forces number to be absolute/positive 
+
+    y = round(x)              #rounds x to nearest int 
+
+    z = x - y                 #subtracts integer from float 
+
+    if x - y == 0:            #if met, num is whole 
+
+        return True 
+
+    else:                     #else not whole num 
+
+        return False 
+
+     
+
+print is_int(-7.2)            #to call / test function 
+
+print is_int(5.0) 
+
+print is_int(-3) 
+
+print is_int(0) 
+
+print is_int(-8.3) 
+
+print is_int(12) 
+
+```
+
+
+### Digit_Sum 
+```python
+def digit_sum(n): 
+
+  string = list(str(n))  
+
+  summa = 0 
+
+     
+
+  for c in string: 
+
+    calc = int(c) 
+
+    summa += calc 
+
+  return summa 
+
+  
+
+print digit_sum(1234) 
+
+```
+
+### Factorial 
+```python
+def factorial(n): 
+
+  if n <1:   # base case 
+
+    return 1 
+
+  else: 
+
+       returnNumber = n * factorial( n - 1 )  # recursive call 
+
+       print(str(n) + '! = ' + str(returnNumber)) 
+
+       return returnNumber 
+
+       
+
+factorial(6) 
+```
+
+### Is Prime 
+
+def is_prime(x): 
+
+    if x < 2: 
+
+        return False 
+
+    else: 
+
+        for n in range(2, x-1): 
+
+            if x % n == 0: 
+
+                print "%d Not prime"% (x) 
+
+                return False 
+
+        print "%d Is prime" % (x) 
+
+        return True 
+
+  
+
+      
+
+is_prime(5) 
+
+is_prime(7) 
+
+is_prime(9) 
+
+is_prime(11) 
+
+is_prime(241) 
+
+```
+
+### Practice makes perfect 
+
+def reverse(text): 
+
+    rev = "" 
+
+    for c in text: 
+
+        rev = c + rev 
+
+    return rev 
+
+  
+
+def reverse2(text): 
+
+  n = "" 
+
+  for i in range(len(text),0,-1): 
+
+    n+=text[i-1] 
+
+  return n   
+
+   
+
+print reverse('Python!') 
+
+print reverse2('Python!') 
+```
+ 
+
+ 
+
+### Anti Vowel 
+```python
+def anti_vowel(text): 
+
+  temp = '' 
+
+  for i in text: 
+
+    if i not in 'aeiouAEIOU': 
+
+      temp = temp + i 
+
+  return temp 
+
+print anti_vowel("Hey You!") 
+
+```
+ 
+
+### Scrabble_score 
+```python
+def scrabble_score(word): 
+
+  word = word.lower() 
+
+  score_end = 0 
+
+  for letter in word: 
+
+    score_end += score[letter] 
+
+  return score_end 
+
+   
+
+  
+
+score = {"a": 1, "c": 3, "b": 3, "e": 1, "d": 2, "g": 2,  
+
+         "f": 4, "i": 1, "h": 4, "k": 5, "j": 8, "m": 3,  
+
+         "l": 1, "o": 1, "n": 1, "q": 10, "p": 3, "s": 1,  
+
+         "r": 1, "u": 1, "t": 1, "w": 4, "v": 4, "y": 4,  
+
+         "x": 8, "z": 10} 
+
+  
+
+print scrabble_score('Helix') 
+
+```
+ 
+### Censor Text
+```python
+def censor (text, word): 
+
+  temp = text 
+
+  if word in temp: 
+
+    temp = temp.replace(word, "*" * len(word)) 
+
+    return temp 
+
+     
+
+print censor("This hack is wack hack", "hack") 
+
+
+ 
+
+def censor(text, word):        return ("*"*len(word)).join(text.split(word))print censor("I know they know you know i know you know", "know") 
+
+or 
+
+def censor(text, word):        return text.replace(word, "*"*len(word))print censor("I know they know you know i know you know", "know") 
+
+ 
+
+```
+ 
+
+### Count 
+```python
+def count(sequence, item): 
+
+    count = 0 
+
+    for i in sequence: 
+
+        if i == item: 
+
+            count += 1 
+
+    return count 
+
+   
+
+print count([1, 2, 1, 1], 1) 
+
+```
+ 
+
+### Purify 
+```python
+def purify(number): 
+
+    return [ x for x in number if x % 2 == 0]       
+
+  
+
+print (purify([1,2,3,4,5,6,7,8,9,10])) 
+
+```
+### Product 
+```python
+def product(number): 
+
+  totalProduct = 1 
+
+  for i in number: 
+
+    totalProduct *= i 
+
+  return totalProduct 
+
+  
+
+print (product([1,2,3,4,5,6,7,8,9,10])) 
+
+```
+### Remove Duplicates
+```python
+def my4_remove_duplicates(lst):    lst.sort()    i = len(lst) - 1    while i > 0:          if lst[i] == lst[i - 1]:            lst.pop(i)        i -= 1    return lst 
+
+ 
+
+```
+ 
+
+### Remove Duplicate Numbers 
+```python
+def remove_duplicates(numbers): 
+
+    newlist = [] 
+
+    for number in numbers: 
+
+       if number not in newlist: 
+
+           newlist.append(number) 
+
+    return newlist 
+
+   
+
+print remove_duplicates([1,2,3,4,5,5,5,6,3,2]) 
+
+```
+ 
+### Median
+```python
+def median(l): 
+
+    l.sort() 
+
+    n = len(l) 
+
+    if n % 2 == 1: 
+
+        return (l[int((n / 2) + 0.5)]) 
+
+    else: 
+
+        return ((l[int(n / 2)] + l[int(n / 2) - 1]) / 2.0) 
+
+ print median([7, 3, 1, 4]) 
+
+ 
+
+```
+ 
+### Print list items - Grades
+```python
+grades = [100, 100, 90, 40, 80, 100, 85, 70, 90, 65, 90, 85, 50.5] 
+
+  
+
+def print_grades(grades_input): 
+
+  for item in grades_input: 
+
+    print item 
+
+  
+
+print_grades(grades) 
+
+```
+ 
+### Sum up grades from a list
+```python
+grades = [100, 100, 90, 40, 80, 100, 85, 70, 90, 65, 90, 85, 50.5] 
+
+  
+
+def grades_sum(scores): 
+
+  total = 0 
+
+  for i in scores: 
+
+    total += i 
+
+  return total 
+
+  
+
+print grades_sum(grades) 
+
+```
+
+### Grades and exam statistics combined
+
+```python
+
+grades = [100, 100, 90, 40, 80, 100, 85, 70, 90, 65, 90, 85, 50.5] 
+
+  
+
+def print_grades(grades_input): 
+
+  for grade in grades_input: 
+
+    print grade 
+
+  
+
+def grades_sum(scores): 
+
+  total = 0 
+
+  for score in scores:  
+
+    total += score 
+
+  return total 
+
+     
+
+def grades_average(grades_input): 
+
+  sum_of_grades = grades_sum(grades_input) 
+
+  average = sum_of_grades / float(len(grades_input)) 
+
+  return average 
+
+  
+
+  
+
+def grades_variance(scores): 
+
+    average=grades_average(scores) 
+
+    variance=0 
+
+    for score in scores: 
+
+        variance +=(average-score)**2 
+
+    variance = variance/len(scores) 
+
+    return variance 
+
+  
+
+def grades_std_deviation(variance): 
+
+  return variance ** 0.5 
+
+  
+
+  
+
+variance = grades_variance(grades) 
+
+  
+
+print "All of the grades", print_grades(grades) 
+
+print "Sum of grades", grades_sum(grades) 
+
+print "Average grade", grades_average(grades) 
+
+print "Variance", grades_variance(grades) 
+
+print "Standard deviation", grades_std_deviation(variance) 
+```
